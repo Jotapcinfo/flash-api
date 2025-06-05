@@ -1,0 +1,136 @@
+DOCUMENTAÇÃO: http://localhost:8080/swagger-ui/index.html
+
+
+Endpoints:
+
+GET BALANCE - localhost:8080/orders/report/balance
+GET USERS - localhost:8080/users
+GET VALOR TOTAL POR STATUS DE PEDIDO - localhost:8080/orders/report/total-by-status
+GET VALOR TOTAL DE PEDIDOS POR USER - localhost:8080/orders/report/total-by-user?userId=1
+-----------------------------------------------------
+POST REGISTRO -localhost:8080/auth/register
+
+{
+  "name": "Barry Allen2",
+  "email": "barry@labs2.com",
+  "phone": "988888888",
+  "password": "123456"
+}
+
+
+POST LOGIN - localhost:8080/auth/login
+
+{
+  "email": "barry@labs.com",
+  "password": "123456"
+}
+
+
+PUT USER  -localhost:8080/users/1
+
+{
+  "name": "Nevasca",
+  "email": "nevasca.gelot@starlabs.com",
+  "phone": "977557765"
+}
+
+
+PUT USER PASSWORD BY ID - localhost:8080/users/1/password
+
+{
+  "oldPassword": "123457",
+  "newPassword": "123458"
+}
+
+DELETE USERS BY ID - http://localhost:8080/users/1
+
+GET ORDERS - localhost:8080/orders
+
+GET ORDERS BY USERS ID - localhost:8080/users/1/orders
+
+GET ORDER STATUS ID - http://localhost:8080/orders/status?status=1
+
+---------------------------------------------
+POST ORDERS - localhost:8080/orders
+
+{
+  "orderStatus": 2,
+  "clientId": 1,
+  "items": [
+    {
+      "productId": 2,
+      "quantity": 1,
+      "price": 1800.0,
+      "paymentMethod" : 2
+    }
+    
+  ]
+}
+
+
+PUT ORDER STATUS - localhost:8080/orders/1/status
+
+{
+  "orderStatus": 1,
+  "moment": "2025-06-01T17:00:00Z"
+}
+
+
+DELETE ORDER BY ID- localhost:8080/orders/1
+
+GET CATEGORIES - localhost:8080/categories
+
+-----------------------------------------------
+
+POST CATEGORIES - localhost:8080/categories
+
+{
+  "name": "Tecnologia de Ponta STAR Labs"
+}
+
+
+PUT CATEGORIES BY ID - localhost:8080/categories/1
+
+{
+  "name": "Equipamentos para a Nevasca"
+}
+
+
+GET PRODUCTS - localhost:8080/products
+
+
+POST PRODUCTS - localhost:8080/products
+
+{
+  "name": "Traje do Flash",
+  "description": "Alta tecnologia STAR Labs",
+  "price": 4500.0,
+  "imgUrl": "",
+  "categoryIds": [1]
+}
+
+
+
+POST PRODUCTS - localhost:8080/products/1
+
+{
+  "name": "Traje Quântico Avançado",
+  "description": "Nova versão do traje criado na STAR Labs com tecnologia temporal.",
+  "price": 7200.0,
+  "imgUrl": "",
+  "categoryIds": [2]
+}
+
+
+
+PUT PRODUCTS ID - localhost:8080/products/1
+
+{
+  "name": "Traje Quântico Avançado",
+  "description": "Nova versão do traje criado na STAR Labs com tecnologia temporal.",
+  "price": 7200.0,
+  "imgUrl": "",
+  "categoryIds": [2]
+}
+
+
