@@ -58,3 +58,5 @@ Este projeto é open-source e está sob a licença MIT.
 Acesse a documentação:
 
 Swagger UI: http://localhost:8080/swagger-ui/index.html
+
+Feito com 💙 por Jefferson Moreno
